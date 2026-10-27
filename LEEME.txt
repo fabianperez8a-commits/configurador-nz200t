@@ -1,0 +1,19 @@
+CONFIGURADOR NZ200T – MAM6080 (PWA)
+
+ARCHIVOS: index.html, manifest.webmanifest, sw.js e iconos. Conservarlos juntos.
+
+PRUEBA EN PC SIN INTERNET:
+1. Abrir PowerShell dentro de esta carpeta.
+2. Ejecutar: py -m http.server 8000
+3. Abrir Chrome/Edge en http://localhost:8000
+4. Para instalar en ese PC, usar el menú del navegador > Instalar aplicación (si aparece).
+5. Tras la primera carga, el Service Worker permite abrir la aplicación offline en ese equipo. Mantener el origen localhost para ese PC si se utiliza esta modalidad; para instalación sencilla y persistente es preferible publicar en HTTPS.
+
+INSTALACIÓN EN CELULARES:
+1. Publicar la carpeta en un hosting estático HTTPS (p. ej. GitHub Pages, Netlify).
+2. Abrir la URL HTTPS en el celular mientras hay internet.
+3. Android: Chrome > menú > Instalar aplicación / Añadir a pantalla de inicio.
+4. iPhone: Safari > Compartir > Añadir a pantalla de inicio.
+5. Abrir la app instalada una vez con internet para verificar que quedó almacenada; luego probar en modo avión.
+
+IMPORTANTE: No basta copiar index.html al teléfono para instalar la PWA; los service workers necesitan HTTPS o localhost. Esta versión NO transmite datos al variador. Los códigos deben verificarse con el manual y las condiciones reales de seguridad. El guardado local permanece en cada dispositivo, no se sincroniza.
